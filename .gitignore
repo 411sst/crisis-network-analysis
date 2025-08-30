@@ -1,0 +1,8 @@
+# Python
+venv/
+*.pyc
+__pycache__/
+config/api_keys.env
+data/raw/*
+logs/*.log
+.ipynb_checkpoints/
