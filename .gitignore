@@ -1,8 +1,235 @@
-# Python
-venv/
-*.pyc
-__pycache__/
+# Crisis Network Analysis - Comprehensive .gitignore for Public Repository
+
+# ==========================================
+# SENSITIVE DATA - NEVER COMMIT THESE
+# ==========================================
+
+# API Keys and Credentials
 config/api_keys.env
+*.env
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.secret
+credentials/
+secrets/
+api_keys/
+
+# Personal Data Files
 data/raw/*
-logs/*.log
-.ipynb_checkpoints/
+data/processed/*
+data/personal/
+data/private/
+**/personal_data/
+**/private_data/
+
+# Large Data Files (GitHub has 100MB limit)
+*.csv
+*.json.gz
+*.pkl
+*.pickle
+*.parquet
+*.h5
+*.hdf5
+*.db
+*.sqlite
+*.sqlite3
+data/networks/*.gexf
+data/networks/*.graphml
+outputs/large_files/
+
+# ==========================================
+# PYTHON
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+venv.bak/
+.venv
+.ENV
+.env
+
+# ==========================================
+# JUPYTER NOTEBOOKS
+# ==========================================
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Jupyter output (remove output from committed notebooks)
+# Uncomment these if you want to keep notebook outputs private:
+# notebooks/**/*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# ==========================================
+# DATA & ANALYSIS OUTPUTS
+# ==========================================
+
+# Log files
+logs/
+*.log
+*.log.*
+log/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+.cache/
+cache/
+
+# Analysis outputs that might contain sensitive data
+results/raw/
+outputs/sensitive/
+reports/internal/
+
+# Model files (can be large)
+models/*.pkl
+models/*.joblib
+*.model
+
+# ==========================================
+# DEVELOPMENT & IDE
+# ==========================================
+
+# Visual Studio Code
+.vscode/
+.vs/
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==========================================
+# OPERATING SYSTEM
+# ==========================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# DOCUMENTATION & TESTING
+# ==========================================
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Documentation builds
+docs/_build/
+site/
+
+# ==========================================
+# DEPLOYMENT & DOCKER
+# ==========================================
+
+# Docker
+.dockerignore
+Dockerfile.prod
+docker-compose.prod.yml
+
+# Deployment configs
+deploy/
+deployment/
+.deploy/
+
+# ==========================================
+# KEEP THESE PLACEHOLDER FILES
+# ==========================================
+
+# Keep directory structure but ignore contents
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/networks/.gitkeep
+!data/results/.gitkeep
+!logs/.gitkeep
+!temp/.gitkeep
+
+# Keep example/template files
+!config/api_keys.env.template
+!config/example_config.yaml
