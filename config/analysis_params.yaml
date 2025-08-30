@@ -1,0 +1,4 @@
+# Analysis Parameters Configuration
+analysis_parameters:
+  resonance_plus:
+    window_size_minutes: 30
