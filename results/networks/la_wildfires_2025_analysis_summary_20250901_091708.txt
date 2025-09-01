@@ -1,0 +1,13 @@
+Crisis Network Analysis Report
+Generated: 2025-09-01 09:17:08.712466
+Crisis: la_wildfires_2025
+Dataset: 2743 total posts
+
+Networks Built:
+  user_interaction: 718 nodes
+  content_similarity: 1336 nodes
+  temporal: 1336 nodes
+  subreddit: 14 nodes
+
+Detailed metrics saved to: la_wildfires_2025_network_metrics_20250901_091708.json
+Hub analysis saved to: la_wildfires_2025_network_hubs_20250901_091708.json

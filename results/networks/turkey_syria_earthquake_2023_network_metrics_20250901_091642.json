@@ -1,0 +1,95 @@
+{
+  "user_interaction_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 444,
+      "edges": 13251,
+      "density": 0.13473857604783113,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 59.689189189189186,
+      "max_degree": 130,
+      "degree_std": 17.435667344239572
+    },
+    "clustering": {
+      "avg_clustering": 0.9933811620046783,
+      "transitivity": 0.9780377884448147
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.5046061432068853,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "content_similarity_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 690,
+      "edges": 4029,
+      "density": 0.016949580362213668,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 11.678260869565218,
+      "max_degree": 87,
+      "degree_std": 14.224930855543395
+    },
+    "clustering": {
+      "avg_clustering": 0.40517366582317205,
+      "transitivity": 0.5417829890191699
+    },
+    "path_lengths": {
+      "avg_shortest_path": 4.02121041217273,
+      "diameter": 14
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "temporal_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 690,
+      "edges": 1030,
+      "density": 0.0021665509770513874,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_in_degree": 1.4927536231884058,
+      "avg_out_degree": 1.4927536231884058,
+      "max_in_degree": 21,
+      "max_out_degree": 21
+    },
+    "path_lengths": {
+      "avg_shortest_path": 0,
+      "diameter": 0
+    }
+  },
+  "subreddit_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 10,
+      "edges": 8,
+      "density": 0.17777777777777778,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 1.6,
+      "max_degree": 3,
+      "degree_std": 1.1135528725660044
+    },
+    "clustering": {
+      "avg_clustering": 0.26666666666666666,
+      "transitivity": 0.5454545454545454
+    },
+    "path_lengths": {
+      "avg_shortest_path": 1.8666666666666667,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  }
+}

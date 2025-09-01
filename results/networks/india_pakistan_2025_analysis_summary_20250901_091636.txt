@@ -1,0 +1,13 @@
+Crisis Network Analysis Report
+Generated: 2025-09-01 09:16:36.385460
+Crisis: india_pakistan_2025
+Dataset: 2743 total posts
+
+Networks Built:
+  user_interaction: 474 nodes
+  content_similarity: 717 nodes
+  temporal: 717 nodes
+  subreddit: 5 nodes
+
+Detailed metrics saved to: india_pakistan_2025_network_metrics_20250901_091636.json
+Hub analysis saved to: india_pakistan_2025_network_hubs_20250901_091636.json

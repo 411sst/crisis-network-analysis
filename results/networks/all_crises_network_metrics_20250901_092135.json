@@ -1,0 +1,374 @@
+{
+  "user_interaction_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 474,
+      "edges": 27153,
+      "density": 0.24221907030267348,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 114.56962025316456,
+      "max_degree": 261,
+      "degree_std": 31.903473963044288
+    },
+    "clustering": {
+      "avg_clustering": 0.9939173206421347,
+      "transitivity": 0.9767439342528772
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.2774263796090075,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "content_similarity_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 717,
+      "edges": 3435,
+      "density": 0.013382108880110329,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 9.581589958158995,
+      "max_degree": 66,
+      "degree_std": 9.675089654113252
+    },
+    "clustering": {
+      "avg_clustering": 0.40771159813766517,
+      "transitivity": 0.5651532457643251
+    },
+    "path_lengths": {
+      "avg_shortest_path": 4.01710921781465,
+      "diameter": 12
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "temporal_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 717,
+      "edges": 507,
+      "density": 0.000987587947920806,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_in_degree": 0.7071129707112971,
+      "avg_out_degree": 0.7071129707112971,
+      "max_in_degree": 9,
+      "max_out_degree": 9
+    },
+    "path_lengths": {
+      "avg_shortest_path": 0,
+      "diameter": 0
+    }
+  },
+  "subreddit_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 5,
+      "edges": 5,
+      "density": 0.5,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 2.0,
+      "max_degree": 3,
+      "degree_std": 1.0954451150103321
+    },
+    "clustering": {
+      "avg_clustering": 0.6666666666666666,
+      "transitivity": 0.75
+    },
+    "path_lengths": {
+      "avg_shortest_path": 1.1666666666666667,
+      "diameter": 2
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "user_interaction_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 444,
+      "edges": 13251,
+      "density": 0.13473857604783113,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 59.689189189189186,
+      "max_degree": 130,
+      "degree_std": 17.435667344239572
+    },
+    "clustering": {
+      "avg_clustering": 0.9933811620046783,
+      "transitivity": 0.9780377884448147
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.5046061432068853,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "content_similarity_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 690,
+      "edges": 4029,
+      "density": 0.016949580362213668,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 11.678260869565218,
+      "max_degree": 87,
+      "degree_std": 14.224930855543395
+    },
+    "clustering": {
+      "avg_clustering": 0.40517366582317205,
+      "transitivity": 0.5417829890191699
+    },
+    "path_lengths": {
+      "avg_shortest_path": 4.02121041217273,
+      "diameter": 14
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "temporal_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 690,
+      "edges": 1030,
+      "density": 0.0021665509770513874,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_in_degree": 1.4927536231884058,
+      "avg_out_degree": 1.4927536231884058,
+      "max_in_degree": 21,
+      "max_out_degree": 21
+    },
+    "path_lengths": {
+      "avg_shortest_path": 0,
+      "diameter": 0
+    }
+  },
+  "subreddit_turkey_syria_earthquake_2023": {
+    "basic_stats": {
+      "nodes": 10,
+      "edges": 8,
+      "density": 0.17777777777777778,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 1.6,
+      "max_degree": 3,
+      "degree_std": 1.1135528725660044
+    },
+    "clustering": {
+      "avg_clustering": 0.26666666666666666,
+      "transitivity": 0.5454545454545454
+    },
+    "path_lengths": {
+      "avg_shortest_path": 1.8666666666666667,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "user_interaction_la_wildfires_2025": {
+    "basic_stats": {
+      "nodes": 718,
+      "edges": 33386,
+      "density": 0.12970322801210554,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 92.99721448467966,
+      "max_degree": 332,
+      "degree_std": 39.73316280167225
+    },
+    "clustering": {
+      "avg_clustering": 0.9893361276629684,
+      "transitivity": 0.9462871693299482
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.2163827537080576,
+      "diameter": 3
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "content_similarity_la_wildfires_2025": {
+    "basic_stats": {
+      "nodes": 1336,
+      "edges": 9832,
+      "density": 0.011025140729776402,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 14.718562874251496,
+      "max_degree": 107,
+      "degree_std": 16.065690831295285
+    },
+    "clustering": {
+      "avg_clustering": 0.4077316821288954,
+      "transitivity": 0.43535223367697595
+    },
+    "path_lengths": {
+      "avg_shortest_path": 3.6879126503454747,
+      "diameter": 10
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "temporal_la_wildfires_2025": {
+    "basic_stats": {
+      "nodes": 1336,
+      "edges": 3239,
+      "density": 0.0018160308596290565,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_in_degree": 2.4244011976047903,
+      "avg_out_degree": 2.4244011976047903,
+      "max_in_degree": 23,
+      "max_out_degree": 25
+    },
+    "path_lengths": {
+      "avg_shortest_path": 0,
+      "diameter": 0
+    }
+  },
+  "subreddit_la_wildfires_2025": {
+    "basic_stats": {
+      "nodes": 14,
+      "edges": 21,
+      "density": 0.23076923076923078,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 3.0,
+      "max_degree": 7,
+      "degree_std": 2.4784787961282104
+    },
+    "clustering": {
+      "avg_clustering": 0.38503401360544215,
+      "transitivity": 0.5294117647058824
+    },
+    "path_lengths": {
+      "avg_shortest_path": 1.5777777777777777,
+      "diameter": 3
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "user_interaction_all": {
+    "basic_stats": {
+      "nodes": 1619,
+      "edges": 83787,
+      "density": 0.06397072465339361,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 103.50463248919085,
+      "max_degree": 493,
+      "degree_std": 57.4445550835227
+    },
+    "clustering": {
+      "avg_clustering": 0.989348786454693,
+      "transitivity": 0.9528521184112764
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.871399815185983,
+      "diameter": 5
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "content_similarity_all": {
+    "basic_stats": {
+      "nodes": 2743,
+      "edges": 40698,
+      "density": 0.010822056701322882,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 29.67407947502734,
+      "max_degree": 189,
+      "degree_std": 30.55098967503668
+    },
+    "clustering": {
+      "avg_clustering": 0.46496004336423863,
+      "transitivity": 0.5019143184646222
+    },
+    "path_lengths": {
+      "avg_shortest_path": 3.530683347511023,
+      "diameter": 10
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "temporal_all": {
+    "basic_stats": {
+      "nodes": 2743,
+      "edges": 4795,
+      "density": 0.0006375222600968502,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_in_degree": 1.7480860371855633,
+      "avg_out_degree": 1.7480860371855633,
+      "max_in_degree": 23,
+      "max_out_degree": 25
+    },
+    "path_lengths": {
+      "avg_shortest_path": 0,
+      "diameter": 0
+    }
+  },
+  "subreddit_all": {
+    "basic_stats": {
+      "nodes": 27,
+      "edges": 60,
+      "density": 0.17094017094017094,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 4.444444444444445,
+      "max_degree": 13,
+      "degree_std": 3.7745083892140068
+    },
+    "clustering": {
+      "avg_clustering": 0.44836418725307614,
+      "transitivity": 0.5263157894736842
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.019047619047619,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  }
+}

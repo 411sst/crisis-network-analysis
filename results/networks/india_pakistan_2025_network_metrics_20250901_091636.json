@@ -1,0 +1,95 @@
+{
+  "user_interaction_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 474,
+      "edges": 27153,
+      "density": 0.24221907030267348,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 114.56962025316456,
+      "max_degree": 261,
+      "degree_std": 31.903473963044288
+    },
+    "clustering": {
+      "avg_clustering": 0.9939173206421347,
+      "transitivity": 0.9767439342528772
+    },
+    "path_lengths": {
+      "avg_shortest_path": 2.2774263796090075,
+      "diameter": 4
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "content_similarity_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 717,
+      "edges": 3435,
+      "density": 0.013382108880110329,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 9.581589958158995,
+      "max_degree": 66,
+      "degree_std": 9.675089654113252
+    },
+    "clustering": {
+      "avg_clustering": 0.40771159813766517,
+      "transitivity": 0.5651532457643251
+    },
+    "path_lengths": {
+      "avg_shortest_path": 4.01710921781465,
+      "diameter": 12
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  },
+  "temporal_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 717,
+      "edges": 507,
+      "density": 0.000987587947920806,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_in_degree": 0.7071129707112971,
+      "avg_out_degree": 0.7071129707112971,
+      "max_in_degree": 9,
+      "max_out_degree": 9
+    },
+    "path_lengths": {
+      "avg_shortest_path": 0,
+      "diameter": 0
+    }
+  },
+  "subreddit_india_pakistan_2025": {
+    "basic_stats": {
+      "nodes": 5,
+      "edges": 5,
+      "density": 0.5,
+      "is_connected": false
+    },
+    "degree_stats": {
+      "avg_degree": 2.0,
+      "max_degree": 3,
+      "degree_std": 1.0954451150103321
+    },
+    "clustering": {
+      "avg_clustering": 0.6666666666666666,
+      "transitivity": 0.75
+    },
+    "path_lengths": {
+      "avg_shortest_path": 1.1666666666666667,
+      "diameter": 2
+    },
+    "communities": {
+      "num_communities": 0,
+      "modularity": 0
+    }
+  }
+}
