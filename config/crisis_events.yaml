@@ -1,0 +1,5 @@
+crisis_events:
+  la_wildfires_2025:
+    name: 'Los Angeles Wildfires'
+    start_date: '2025-01-07'
+    end_date: '2025-01-31'
