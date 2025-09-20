@@ -1,5 +1,305 @@
+# Crisis Events Configuration - Complete Specification
+# Crisis Network Analysis Project - Updated for 2025
+
 crisis_events:
   la_wildfires_2025:
-    name: 'Los Angeles Wildfires'
-    start_date: '2025-01-07'
-    end_date: '2025-01-31'
+    name: "Los Angeles Wildfires"
+    description: "Series of devastating wildfires including Palisades Fire and Eaton Fire"
+    type: "natural_disaster"
+    start_date: "2025-01-07"
+    end_date: "2025-01-31"
+    peak_period:
+      - "2025-01-07"
+      - "2025-01-10"
+
+    # Crisis Timeline Phases
+    timeline_phases:
+      pre_crisis:
+        start: "2025-01-01"
+        end: "2025-01-06"
+        description: "Dry conditions, fire weather warnings"
+      acute_phase:
+        start: "2025-01-07"
+        end: "2025-01-10"
+        description: "Rapid fire spread, mass evacuations"
+      response_phase:
+        start: "2025-01-11"
+        end: "2025-01-20"
+        description: "Firefighting efforts, celebrity involvement"
+      recovery_phase:
+        start: "2025-01-21"
+        end: "2025-01-31"
+        description: "Containment, damage assessment, rebuilding discussions"
+
+    # Impact Metrics
+    impact:
+      fatalities: "30+"
+      evacuations: "200,000+"
+      structures_destroyed: "18,000+"
+      economic_impact: "$76-131 billion"
+      acres_burned: "37,000+"
+
+    # Search Keywords and Hashtags
+    keywords:
+      primary:
+        - "#PalisadesFire"
+        - "#EatonFire"
+        - "#LAFires"
+        - "#CaliforniaWildfires"
+        - "#SantaAnaWinds"
+      secondary:
+        - "Los Angeles wildfire"
+        - "Palisades fire"
+        - "Eaton fire"
+        - "Altadena fire"
+        - "Pacific Palisades"
+        - "Malibu fire"
+        - "evacuation LA"
+        - "California fire emergency"
+      location_specific:
+        - "Pacific Palisades evacuation"
+        - "Altadena fire"
+        - "Pasadena fire"
+        - "Santa Monica Mountains"
+        - "Topanga Canyon"
+
+    # Geographic Boundaries
+    geographic_bounds:
+      lat_range: [34.0, 34.3]
+      lon_range: [-118.8, -118.2]
+      affected_areas:
+        - "Pacific Palisades"
+        - "Altadena"
+        - "Pasadena"
+        - "Malibu"
+        - "Santa Monica Mountains"
+
+    # Platform-Specific Configuration
+    platforms:
+      reddit:
+        subreddits:
+          - "LosAngeles"
+          - "California"
+          - "wildfire"
+          - "CaliforniaWildfires"
+          - "pasadena"
+          - "SantaMonica"
+          - "Malibu"
+          - "PacificPalisades"
+        expected_posts_per_day: 500
+      twitter:
+        expected_posts_per_day: 100000
+        celebrity_accounts: true
+      news:
+        sources: ["CNN", "ABC7", "KTLA", "LAist"]
+
+    expected_volume: 100000  # posts per day at peak
+
+  india_pakistan_2025:
+    name: "India-Pakistan Conflict"
+    description: "Military escalation following Pahalgam terrorist attack, Operation Sindoor"
+    type: "political_military_crisis"
+    start_date: "2025-05-07"
+    end_date: "2025-05-31"
+    peak_period:
+      - "2025-05-07"
+      - "2025-05-10"
+
+    # Crisis Timeline Phases
+    timeline_phases:
+      pre_crisis:
+        start: "2025-04-22"
+        end: "2025-05-06"
+        description: "Pahalgam attack, diplomatic tensions"
+      acute_phase:
+        start: "2025-05-07"
+        end: "2025-05-10"
+        description: "Operation Sindoor, military exchanges"
+      de_escalation:
+        start: "2025-05-11"
+        end: "2025-05-20"
+        description: "Ceasefire negotiations, diplomatic talks"
+      resolution_phase:
+        start: "2025-05-21"
+        end: "2025-05-31"
+        description: "Return to status quo, lessons learned"
+
+    # Impact Metrics
+    impact:
+      operation_sindoor_targets: 9
+      military_engagement_duration: "3 days"
+      diplomatic_crisis_level: "high"
+      international_involvement: "moderate"
+
+    # Search Keywords and Hashtags
+    keywords:
+      primary:
+        - "#IndiaPakistanConflict"
+        - "#OperationSindoor"
+        - "#PahalgamAttack"
+        - "#Kashmir"
+        - "#IndiaPakistan"
+      secondary:
+        - "India Pakistan war"
+        - "Kashmir conflict"
+        - "Operation Sindoor"
+        - "Pahalgam terrorist attack"
+        - "India Pakistan military"
+        - "LoC violation"
+        - "cross border terrorism"
+      geopolitical:
+        - "#Balakot"
+        - "#LoC"
+        - "#PakistanArmy"
+        - "#IndianArmy"
+        - "#KashmirConflict"
+        - "surgical strike"
+        - "ceasefire violation"
+
+    # Geographic Boundaries
+    geographic_bounds:
+      lat_range: [24.0, 37.0]
+      lon_range: [68.0, 97.0]
+      affected_regions:
+        - "Kashmir"
+        - "Punjab (both sides)"
+        - "Rajasthan border"
+        - "Line of Control"
+
+    # Platform-Specific Configuration
+    platforms:
+      reddit:
+        subreddits:
+          - "india"
+          - "pakistan"
+          - "Kashmir"
+          - "IndiaSpeaks"
+          - "worldnews"
+          - "geopolitics"
+          - "Military"
+        expected_posts_per_day: 300
+      twitter:
+        expected_posts_per_day: 80000
+        official_accounts: true
+        disinformation_risk: "high"
+      news:
+        sources: ["Times of India", "Dawn", "Al Jazeera", "Reuters"]
+
+    expected_volume: 80000  # posts per day at peak
+
+  turkey_syria_earthquake_2023:
+    name: "Turkey-Syria Earthquake"
+    description: "Magnitude 7.8 earthquake affecting southeastern Turkey and northern Syria"
+    type: "natural_disaster"
+    start_date: "2023-02-06"
+    end_date: "2023-02-20"
+    peak_period:
+      - "2023-02-06"
+      - "2023-02-08"
+
+    # Crisis Timeline Phases
+    timeline_phases:
+      acute_phase:
+        start: "2023-02-06"
+        end: "2023-02-08"
+        description: "Earthquake impact, immediate rescue operations"
+      response_phase:
+        start: "2023-02-09"
+        end: "2023-02-15"
+        description: "International aid, rescue operations"
+      recovery_phase:
+        start: "2023-02-16"
+        end: "2023-02-20"
+        description: "Damage assessment, humanitarian aid coordination"
+
+    # Impact Metrics
+    impact:
+      fatalities: "50,000+"
+      magnitude: "7.8"
+      affected_countries: 2
+      international_rescue_teams: "multiple"
+      displaced_people: "millions"
+
+    # Search Keywords and Hashtags
+    keywords:
+      primary:
+        - "#TurkeyEarthquake"
+        - "#SyriaEarthquake"
+        - "#DepremTurkiye"
+        - "#earthquake"
+        - "#Deprem"
+      secondary:
+        - "Turkey earthquake"
+        - "Syria earthquake"
+        - "earthquake Turkey"
+        - "earthquake rescue"
+        - "Turkey disaster"
+        - "Syria humanitarian crisis"
+      multilingual:
+        - "#Zelzele"  # Persian/Arabic
+        - "#زلزله"    # Persian
+        - "#زلزال"    # Arabic
+        - "deprem yardım"  # Turkish
+        - "earthquake help"
+
+    # Geographic Boundaries
+    geographic_bounds:
+      lat_range: [35.0, 39.0]
+      lon_range: [35.0, 40.0]
+      affected_regions:
+        - "Southeastern Turkey"
+        - "Northern Syria"
+        - "Gaziantep Province"
+        - "Kahramanmaraş Province"
+        - "Aleppo Governorate"
+
+    # Platform-Specific Configuration
+    platforms:
+      reddit:
+        subreddits:
+          - "Turkey"
+          - "syria"
+          - "earthquake"
+          - "worldnews"
+          - "europe"
+          - "MiddleEastNews"
+          - "syriancivilwar"
+        expected_posts_per_day: 800
+      twitter:
+        expected_posts_per_day: 150000
+        multilingual: true
+        humanitarian_focus: true
+      news:
+        sources: ["BBC", "CNN", "TRT", "Syrian Observatory"]
+
+    expected_volume: 150000  # posts per day at peak
+
+# Global Configuration Settings
+global_settings:
+  data_collection:
+    max_posts_per_crisis: 500000
+    sample_size_for_testing: 5000
+    rate_limit_delay: 1.0  # seconds between requests
+
+  analysis_parameters:
+    pre_crisis_buffer_days: 7
+    post_crisis_buffer_days: 14
+    temporal_window_hours: 6
+    minimum_engagement_threshold: 1
+
+  quality_control:
+    language_detection: true
+    spam_filtering: true
+    bot_detection: true
+    content_moderation: true
+
+  privacy_settings:
+    anonymize_user_ids: true
+    remove_personal_info: true
+    data_retention_days: 365
+
+  platforms_priority:
+    1: "reddit"      # Primary source
+    2: "academic"    # Academic datasets
+    3: "news"        # News sources
+    4: "twitter"     # If available
