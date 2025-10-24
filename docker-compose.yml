@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  # Main analysis service
+  crisis-analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crisis-network-analysis
+    volumes:
+      # Mount project directories
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+      - ./notebooks:/app/notebooks
+      - ./config:/app/config
+    environment:
+      - PYTHONPATH=/app/src
+      - ENVIRONMENT=development
+    env_file:
+      - ./config/api_keys.env
+    command: python -c "print('Crisis Network Analysis Ready')"
+    networks:
+      - crisis-network
+
+  # Jupyter notebook service
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crisis-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+      - ./notebooks:/app/notebooks
+      - ./src:/app/src
+      - ./config:/app/config
+    environment:
+      - PYTHONPATH=/app/src
+      - JUPYTER_ENABLE_LAB=yes
+    env_file:
+      - ./config/api_keys.env
+    command: >
+      jupyter lab
+      --ip=0.0.0.0
+      --port=8888
+      --no-browser
+      --allow-root
+      --NotebookApp.token=''
+      --NotebookApp.password=''
+    networks:
+      - crisis-network
+
+  # Optional: PostgreSQL database for storing results
+  # Uncomment if you need persistent database storage
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: crisis-postgres
+  #   environment:
+  #     - POSTGRES_USER=crisis_user
+  #     - POSTGRES_PASSWORD=crisis_password
+  #     - POSTGRES_DB=crisis_network_db
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     - crisis-network
+
+networks:
+  crisis-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+
+# Usage:
+# Build and start services:
+#   docker-compose up -d
+#
+# Start only Jupyter:
+#   docker-compose up jupyter
+#
+# Run tests:
+#   docker-compose run crisis-analysis pytest tests/
+#
+# Execute Python script:
+#   docker-compose run crisis-analysis python scripts/your_script.py
+#
+# Stop services:
+#   docker-compose down
+#
+# Access Jupyter:
+#   http://localhost:8888
