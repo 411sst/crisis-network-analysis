@@ -25,18 +25,14 @@ Integration of network structural analysis with cognitive process analysis using
 - **Impact**: 30+ deaths, 200,000+ evacuations, 18,000+ structures destroyed
 - **Keywords**: `#PalisadesFire`, `#EatonFire`, `#LAFires`
 - **Reddit Subreddits**: `r/LosAngeles`, `r/California`, `r/wildfire`
+- **Analysis Focus**: Information accuracy during rapid-spread disasters, evacuation coordination
 
-### 2. India-Pakistan Conflict (May 7-31, 2025)
-- **Type**: Political/military crisis with competing narratives
-- **Timeline**: Pahalgam attack → Operation Sindoor → diplomatic resolution
-- **Keywords**: `#IndiaPakistanConflict`, `#OperationSindoor`
-- **Reddit Subreddits**: `r/india`, `r/pakistan`, `r/Kashmir`, `r/worldnews`
-
-### 3. Turkey-Syria Earthquake (February 6-20, 2023)
+### 2. Turkey-Syria Earthquake (February 6-20, 2023)
 - **Type**: International natural disaster with cross-linguistic data
 - **Impact**: 50,000+ fatalities, international rescue operations
 - **Keywords**: `#TurkeyEarthquake`, `#SyriaEarthquake`, `#DepremTurkiye`
 - **Reddit Subreddits**: `r/Turkey`, `r/syria`, `r/earthquake`
+- **Analysis Focus**: Cross-border humanitarian coordination, multilingual information dissemination
 
 ## 🏗️ Project Structure
 
