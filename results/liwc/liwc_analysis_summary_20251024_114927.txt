@@ -1,0 +1,9 @@
+LIWC Crisis Network Analysis Report
+Generated: 2025-10-24 11:49:28.001123
+Dataset: 497 total posts
+
+Files Generated:
+  Enhanced Dataset: liwc_enhanced_dataset_20251024_114927.csv
+  Crisis Profiles: crisis_cognitive_profiles_20251024_114927.json
+  PADM Analysis: padm_analysis_20251024_114927.json
+  Statistical Analysis: statistical_analysis_20251024_114927.json

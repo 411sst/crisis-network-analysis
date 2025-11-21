@@ -51,33 +51,44 @@ st.success(f"✅ Loaded {len(df):,} posts")
 has_liwc_scores = any(col in df.columns for col in ['cogproc', 'affect', 'social', 'risk'])
 
 if not has_liwc_scores:
-    st.warning("""
-    ⚠️ **LIWC scores not found in dataset!**
+    # Try to load existing LIWC results
+    results_dir = project_root / 'results' / 'liwc'
+    liwc_datasets = list(results_dir.glob('liwc_enhanced_dataset_*.csv')) if results_dir.exists() else []
+    
+    if liwc_datasets:
+        # Use the most recent LIWC-enhanced dataset
+        latest_liwc = sorted(liwc_datasets)[-1]
+        st.info(f"📊 Loading pre-computed LIWC results from: `{latest_liwc.name}`")
+        df = pd.read_csv(latest_liwc)
+        has_liwc_scores = True
+    else:
+        st.warning("""
+        ⚠️ **LIWC scores not found in dataset!**
 
-    This dataset hasn't been processed with LIWC yet.
+        This dataset hasn't been processed with LIWC yet.
 
-    To run LIWC analysis, use the LIWC integration module:
-    ```python
-    python scripts/run_liwc_integration.py
-    ```
+        To run LIWC analysis, use the LIWC integration module:
+        ```python
+        python scripts/run_liwc_integration.py
+        ```
 
-    For now, we'll show mock data visualization examples.
-    """)
+        For now, we'll show mock data visualization examples.
+        """)
 
-    # Create mock LIWC scores for demonstration
-    import numpy as np
+        # Create mock LIWC scores for demonstration
+        import numpy as np
 
-    np.random.seed(42)
-    df['cogproc'] = np.random.uniform(5, 15, len(df))
-    df['affect'] = np.random.uniform(3, 12, len(df))
-    df['social'] = np.random.uniform(8, 18, len(df))
-    df['risk'] = np.random.uniform(1, 8, len(df))
-    df['certainty'] = np.random.uniform(2, 10, len(df))
-    df['tentative'] = np.random.uniform(1, 7, len(df))
-    df['posemo'] = np.random.uniform(2, 10, len(df))
-    df['negemo'] = np.random.uniform(3, 12, len(df))
+        np.random.seed(42)
+        df['cogproc'] = np.random.uniform(5, 15, len(df))
+        df['affect'] = np.random.uniform(3, 12, len(df))
+        df['social'] = np.random.uniform(8, 18, len(df))
+        df['risk'] = np.random.uniform(1, 8, len(df))
+        df['certainty'] = np.random.uniform(2, 10, len(df))
+        df['tentative'] = np.random.uniform(1, 7, len(df))
+        df['posemo'] = np.random.uniform(2, 10, len(df))
+        df['negemo'] = np.random.uniform(3, 12, len(df))
 
-    st.info("📊 **Showing example visualizations with mock data**")
+        st.info("📊 **Showing example visualizations with mock data**")
 
 # Tabs
 tab1, tab2, tab3, tab4 = st.tabs([
