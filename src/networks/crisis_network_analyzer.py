@@ -435,6 +435,36 @@ class CrisisNetworkAnalyzer:
         self.metrics[network_name] = metrics
         
         return metrics
+
+    # Compatibility wrapper for tests: calculate metrics given a Graph directly
+    def calculate_basic_network_metrics(self, G: nx.Graph) -> Dict[str, Any]:
+        """
+        Calculate basic metrics for a provided networkx graph.
+
+        This wrapper matches the test suite's expected API.
+
+        Args:
+            G: A networkx Graph or DiGraph instance.
+
+        Returns:
+            Dict with basic metrics (nodes, edges, density, connectivity flags).
+        """
+        # Temporary name to reuse existing logic without storing permanently
+        temp_name = "__temp_network_for_metrics__"
+        self.networks[temp_name] = G
+        try:
+            metrics = self.calculate_basic_metrics(temp_name)
+            # Flatten key bits to align with tests' simple assertions
+            basic = metrics.get('basic_stats', {})
+            return {
+                'num_nodes': basic.get('nodes', 0),
+                'num_edges': basic.get('edges', 0),
+                'density': basic.get('density', 0.0),
+                'is_connected': basic.get('is_connected', False)
+            }
+        finally:
+            # Clean up temporary reference
+            self.networks.pop(temp_name, None)
     
     def identify_crisis_hubs(self, network_name: str, top_k: int = 10) -> Dict[str, List]:
         """Identify different types of crisis communication hubs"""
@@ -485,6 +515,28 @@ class CrisisNetworkAnalyzer:
             hubs['influence_leaders'] = []
         
         return hubs
+
+    # Compatibility wrapper for tests: identify hubs given a Graph directly
+    def identify_network_hubs(self, G: nx.Graph, top_k: int = 10) -> List[Dict[str, Any]]:
+        """
+        Identify top hubs by degree centrality for a provided graph.
+
+        This wrapper matches the test suite's expected API (returns a list
+        of dicts with 'node' and 'centrality' keys).
+        """
+        if G.number_of_nodes() == 0:
+            return []
+
+        if G.is_directed():
+            centrality = nx.in_degree_centrality(G)
+        else:
+            centrality = nx.degree_centrality(G)
+
+        top = sorted(centrality.items(), key=lambda x: x[1], reverse=True)[:top_k]
+        return [{
+            'node': node,
+            'centrality': score
+        } for node, score in top]
     
     def analyze_all_networks(self, crisis_id: Optional[str] = None):
         """Perform comprehensive network analysis"""

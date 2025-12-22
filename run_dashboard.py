@@ -31,7 +31,7 @@ def main():
         # Run streamlit
         subprocess.run([
             sys.executable, "-m", "streamlit", "run",
-            str(dashboard_dir / "app.py"),
+            str(dashboard_dir / "Home.py"),
             "--server.port=8501",
             "--server.headless=false",
             "--browser.gatherUsageStats=false"

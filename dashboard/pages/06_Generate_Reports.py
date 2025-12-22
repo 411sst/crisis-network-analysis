@@ -247,11 +247,11 @@ if st.button("🚀 Generate Report", type="primary", use_container_width=True):
                     </div>
                     <div class="metric-card">
                         <h3>Total Comments</h3>
-                        <div class="value">{df['num_comments'].sum():,} if 'num_comments' in df.columns else 'N/A'}</div>
+                        <div class="value">{df['num_comments'].sum():, if 'num_comments' in df.columns else 'N/A'}</div>
                     </div>
                     <div class="metric-card">
                         <h3>Avg Engagement</h3>
-                        <div class="value">{df['num_comments'].mean():.1f} if 'num_comments' in df.columns else 'N/A'}</div>
+                        <div class="value">{df['num_comments'].mean():.1f if 'num_comments' in df.columns else 'N/A'}</div>
                     </div>
                 </div>
 

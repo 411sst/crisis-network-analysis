@@ -44,7 +44,11 @@ st.markdown('<h1 class="main-header">🌐 Crisis Network Analysis Dashboard</h1>
 
 # Sidebar
 with st.sidebar:
-    st.image("https://via.placeholder.com/150x50/1f77b4/ffffff?text=Crisis+Analysis", use_container_width=True)
+    # Streamlit's st.image expects `use_column_width` (not `use_container_width`)
+    st.image(
+        "https://via.placeholder.com/150x50/1f77b4/ffffff?text=Crisis+Analysis",
+        use_column_width=True,
+    )
     st.markdown("---")
 
     st.markdown("### 📊 Navigation")

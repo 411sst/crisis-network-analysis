@@ -1,0 +1,119 @@
+{
+  "exposure_metrics": {
+    "percept": {
+      "mean": 0.30498717358986327,
+      "median": 0.0,
+      "std": 0.9260844250431308,
+      "high_exposure_posts": "50"
+    },
+    "see": {
+      "mean": 0.3906368654590297,
+      "median": 0.0,
+      "std": 1.286081369536458,
+      "high_exposure_posts": "50"
+    },
+    "hear": {
+      "mean": 0.12634888424500032,
+      "median": 0.0,
+      "std": 0.6177971896388611,
+      "high_exposure_posts": "50"
+    },
+    "feel": {
+      "mean": 0.20831104034776432,
+      "median": 0.0,
+      "std": 0.9141241288347214,
+      "high_exposure_posts": "50"
+    },
+    "overall_exposure": {
+      "mean": 0.2575709909104144,
+      "high_exposure_threshold": 0.6797082228116716,
+      "posts_above_threshold": "50"
+    }
+  },
+  "attention_metrics": {
+    "cogproc": {
+      "mean": 0.3797707474766007,
+      "median": 0.0,
+      "std": 0.8547422662433398,
+      "high_attention_posts": "50"
+    },
+    "comparison": {
+      "mean": 0.5523479123741362,
+      "median": 0.0,
+      "std": 1.0363903874376805,
+      "high_attention_posts": "50"
+    },
+    "differentiation": {
+      "mean": 0.5995806123273398,
+      "median": 0.0,
+      "std": 1.1380127967869134,
+      "high_attention_posts": "50"
+    },
+    "overall_attention": {
+      "mean": 0.5105664240593589,
+      "high_attention_threshold": 1.3333333333333333,
+      "posts_above_threshold": "49"
+    }
+  },
+  "comprehension_metrics": {
+    "insight": {
+      "mean": 0.29910407181256526,
+      "median": 0.0,
+      "std": 0.913079185471388,
+      "high_comprehension_posts": "50"
+    },
+    "certainty": {
+      "mean": 0.14555967786088414,
+      "median": 0.0,
+      "std": 0.5857323395769177,
+      "high_comprehension_posts": "50"
+    },
+    "causation": {
+      "mean": 0.2612354819777139,
+      "median": 0.0,
+      "std": 1.023488503852935,
+      "high_comprehension_posts": "50"
+    },
+    "overall_comprehension": {
+      "mean": 0.23529974388372113,
+      "high_comprehension_threshold": 0.6588235294117651,
+      "posts_above_threshold": "50"
+    }
+  },
+  "summary_statistics": {
+    "total_posts_analyzed": 497,
+    "crisis_events": 1,
+    "analysis_timestamp": "2025-10-24T12:06:09.356385",
+    "liwc_categories_available": [
+      "cogproc",
+      "causation",
+      "certainty",
+      "differentiation",
+      "discrepancies",
+      "insight",
+      "tentative",
+      "comparison",
+      "percept",
+      "see",
+      "hear",
+      "feel",
+      "affect",
+      "posemo",
+      "negemo",
+      "anx",
+      "anger",
+      "sad",
+      "swear",
+      "risk",
+      "social",
+      "work",
+      "leisure",
+      "home",
+      "money",
+      "death",
+      "time",
+      "space",
+      "motion"
+    ]
+  }
+}

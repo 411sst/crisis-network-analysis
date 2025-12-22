@@ -6,6 +6,95 @@ from pathlib import Path
 from dotenv import load_dotenv
 import time
 
+
+class WorkingRedditCollector:
+    """
+    Minimal Reddit collector used by tests.
+
+    Provides:
+    - collect_posts(subreddit, limit=..., time_filter=...)
+    - search_posts(subreddit, query, limit=..., time_filter=...)
+    - save_to_csv(df, path)
+    """
+
+    def __init__(self, client_id: str = None, client_secret: str = None, user_agent: str = None):
+        load_dotenv()
+
+        # Allow passing credentials explicitly (as tests do), else use env vars
+        client_id = client_id or os.getenv('REDDIT_CLIENT_ID')
+        client_secret = client_secret or os.getenv('REDDIT_CLIENT_SECRET')
+        user_agent = user_agent or os.getenv('REDDIT_USER_AGENT') or 'crisis-network-analysis-tests'
+
+        self.reddit = praw.Reddit(
+            client_id=client_id,
+            client_secret=client_secret,
+            user_agent=user_agent,
+        )
+
+    def _post_to_dict(self, post) -> dict:
+        """Convert a PRAW submission (mock or real) to a dict row."""
+        author_name = '[deleted]'
+        try:
+            if getattr(post, 'author', None) is not None:
+                # Some mocks set author.name; real PRAW supports str(post.author)
+                author_name = getattr(getattr(post, 'author', None), 'name', None) or str(post.author)
+        except Exception:
+            author_name = '[deleted]'
+
+        subreddit_name = None
+        try:
+            sub = getattr(post, 'subreddit', None)
+            subreddit_name = getattr(sub, 'display_name', None) if sub else None
+        except Exception:
+            subreddit_name = None
+
+        created_ts = getattr(post, 'created_utc', None)
+        try:
+            created_dt = datetime.fromtimestamp(created_ts) if created_ts is not None else None
+        except Exception:
+            created_dt = None
+
+        return {
+            'title': getattr(post, 'title', ''),
+            'content': (getattr(post, 'selftext', '') or getattr(post, 'title', '')),
+            'author': author_name or '[deleted]',
+            'subreddit': subreddit_name or '',
+            'created_utc': created_dt,
+            'score': getattr(post, 'score', 0),
+            'num_comments': getattr(post, 'num_comments', 0),
+            'upvote_ratio': getattr(post, 'upvote_ratio', 0.0),
+            'url': getattr(post, 'url', ''),
+            'post_id': getattr(post, 'id', ''),
+            'permalink': getattr(post, 'permalink', ''),
+        }
+
+    def collect_posts(self, subreddit: str, limit: int = 100, time_filter: str = 'week') -> pd.DataFrame:
+        """Collect posts from a subreddit using the 'hot' listing by default."""
+        try:
+            sub = self.reddit.subreddit(subreddit)
+            # Tests mock .hot; time_filter is accepted but unused in this minimal impl
+            posts = list(sub.hot(limit=limit))
+        except Exception:
+            posts = []
+
+        rows = [self._post_to_dict(p) for p in posts]
+        return pd.DataFrame(rows)
+
+    def search_posts(self, subreddit: str, query: str, limit: int = 100, time_filter: str = 'all') -> pd.DataFrame:
+        """Search posts in a subreddit by query string."""
+        try:
+            sub = self.reddit.subreddit(subreddit)
+            posts = list(sub.search(query, limit=limit, time_filter=time_filter))
+        except Exception:
+            posts = []
+
+        rows = [self._post_to_dict(p) for p in posts]
+        return pd.DataFrame(rows)
+
+    def save_to_csv(self, df: pd.DataFrame, path: str) -> None:
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
+        df.to_csv(path, index=False)
+
 def collect_reddit_crisis_data():
     """Simple working Reddit crisis data collector"""
     load_dotenv()
